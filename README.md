@@ -1,4 +1,18 @@
-# eddy-ng
+
+
+# eddy-ng - my fork
+## I've just added PR139 and PR150 from [`upstream`](https://github.com/vvuk/eddy-ng).
+
+- **PR139**: Adaptive bed_mesh calibration for `EDDYNG_BED_MESH_EXPERIMENTAL`, accepts `ADAPTIVE=1` | And `ADAPTIVE_MARGIN=X.X` if eu want, normal margin is 5.0.
+
+- **PR150**: 3D Temperature Z-Drift Calibration & Enhanced Setup/Tap Reliability
+This PR introduces 3D Temperature Z-Drift Calibration for `eddy-ng`, allowing Eddy current sensors to compensate for thermal expansion and Z-drift across a range of toolhead/sensor temperatures. This implementation models the Z-drift analytically using low-degree rational and cubic polynomial fits. The resulting model coefficients are saved directly to the printer configuration and reconstructed on boot.
+Additionally, this PR includes several reliability and safety enhancements to the `SETUP` wizard, coordinate handling, range clamping, and domain clipping, backed by a comprehensive unit testing suite. 
+### Consult [PR#150](https://github.com/vvuk/eddy-ng/pull/150) for more infos.
+
+---
+
+# From Upstream:
 
 > ***Note: October 2025 -- life has gotten quite busy lately, so I've been much slower to respond to issues and make updates. Apologies, will get back to it soon!***
 
@@ -47,3 +61,4 @@ git pull
 ./install.sh
 ```
 
+ 
